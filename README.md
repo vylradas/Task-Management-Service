@@ -38,5 +38,12 @@ curl -X POST "https://localhost:7143/api/tasks" \
   "description": "Пройти базовий курс з ASP.NET Core"
 }'
 ```
-
+### 2. Отримати всі завдання (GET)
+```bash
+curl "https://localhost:7143/api/tasks"
+```
+### 3. Змінити статус завдання (PATCH)
+```bash
+curl -X PATCH "https://localhost:7143/api/tasks/{id}/status?newStatus=InWork"
+```
 
