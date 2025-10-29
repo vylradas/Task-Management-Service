@@ -23,3 +23,16 @@
 1. Клонувати репозиторій:
 ```bash
 git clone https://github.com/vylradas/Task-Management-Service.git
+
+---
+## Приклад запиту до API
+
+### 1. Створити нове завдання (POST)
+
+```bash
+curl -X POST "https://localhost:5001/api/tasks" \
+-H "Content-Type: application/json" \
+-d '{
+  "title": "Навчити C#",
+  "description": "Пройти базовий курс з ASP.NET Core"
+}'
