@@ -30,8 +30,8 @@ namespace TaskManager.Api.Controllers
         [HttpPost]
         public ActionResult<TaskItem> Create(TaskItem task)
         {
-            _repository.Add(task);
-            return CreatedAtAction(nameof(Get), new { id = task.Id }, task);
+            var created = _repository.Create(task);
+            return CreatedAtAction(nameof(Get), new { id = created.Id }, created);
         }
 
         [HttpPatch("{id}/status")]
